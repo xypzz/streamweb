@@ -14,7 +14,39 @@
 #bc = st.get_option('theme.backgroundColor')
 #sbc = st.get_option('theme.secondaryBackgroundColor')
 #tc = st.get_option('theme.textColor')
+def gen_labels():
+    labels = {0 : "Psilocybe Azurescens", 1 : "Psilocybe Semilanceata", 2 : "Panaeolus Cinctulus"}
+    return labels
 
+def preprocess(image):
+    image = np.array(image.resize((300, 300), Image.ANTIALIAS))
+    image = np.array(image, dtype='uint8')
+    image = np.array(image)/255.0
+    return image
+
+
+def CNN_Model():
+    input_shape = (300, 300, 3)
+    num_classes=3
+    model = Sequential()    
+    model.add(Conv2D(32, kernel_size=(3,3), padding='Same', input_shape = input_shape, activation='relu'))
+    model.add(MaxPool2D(pool_size=2)) 
+
+    model.add(Conv2D(32, kernel_size = (3,3), padding='same',activation='relu'))
+    model.add(MaxPool2D(pool_size=2)) 
+
+    model.add(Conv2D(32, kernel_size = (3,3), padding='same',activation='relu'))
+    model.add(MaxPool2D(pool_size=2)) 
+    model.add(Flatten())
+
+    model.add(Dense(32,activation='relu'))
+    model.add(Dropout(0.2))
+    model.add(Dense(2000,activation='relu'))
+
+    model.add(Dropout(0.2))
+    model.add(Dense(num_classes, activation = 'softmax'))
+    return model  
+    
 labels = gen_labels()
 
 html_temp = '''
