@@ -2,13 +2,13 @@ import time
 import numpy as np
 import streamlit as st
 import urllib.request
-import tomli
+#import tomli
 from PIL import Image
 from utils import *
 from keras.utils import load_img, img_to_array
 
-with open("config.toml", "rb") as f:
-    toml_dict = tomli.load(f)
+#with open("config.toml", "rb") as f:
+    #toml_dict = tomli.load(f)
 
 pc = st.get_option('theme.primaryColor')
 bc = st.get_option('theme.backgroundColor')
