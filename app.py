@@ -2,7 +2,7 @@ import time
 import numpy as np
 import streamlit as st
 import urllib.request
-import tomli as tomllib
+import tomli
 from PIL import Image
 from utils import *
 from keras.utils import load_img, img_to_array
