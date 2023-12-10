@@ -7,5 +7,8 @@ tomli==2.0.1
 tensorflow==2.9.0
 pandas==1.5.2
 Pillow==9.4.0
-Sequential
-utils
+imutils==0.5.4
+Jinja2==3.1.2
+jsonschema==4.17.3
+keras-nightly==2.5.0.dev2021032900
+Keras-Preprocessing==1.1.2
