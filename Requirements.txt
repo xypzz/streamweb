@@ -12,3 +12,6 @@ Jinja2==3.1.2
 jsonschema==4.17.3
 keras-nightly==2.5.0.dev2021032900
 Keras-Preprocessing==1.1.2
+fastapi==0.95.0
+Flask==1.1.2
+nest_asyncio==1.5.6
