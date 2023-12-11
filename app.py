@@ -4,10 +4,10 @@ import streamlit as st
 import urllib.request
 import tomli
 from PIL import Image
-from utils import *
-from keras.utils import load_img, img_to_array
+#from utils import *
+#from keras.utils import load_img, img_to_array
 
-from keras.models import Sequential
+#from keras.models import Sequential
 from keras.layers import Conv2D, Flatten, MaxPool2D, Dense, Dropout, Dropout
 from keras.losses import sparse_categorical_crossentropy, binary_crossentropy
 from keras.optimizers import Adam
